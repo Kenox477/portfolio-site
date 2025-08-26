@@ -1,0 +1,51 @@
+.NavigationBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background: #111; 
+     backdrop-filter: blur(14px); 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+   
+    color: #f5f5f5;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor:pointer;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff6ec7;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6ec7;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
